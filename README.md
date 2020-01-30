@@ -1,11 +1,10 @@
 ### https://laradock.io Introduction
 
-1 - Clone Laradock (git clone https://github.com/Laradock/laradock.git)
-2 - Enter the laradock folder and rename env-example to .env.
-2a. Create laradock sibling folder named public ( you can later change the name by going to nginx/sites/default.conf)
-2b. nginx/sites/default.conf also allows setting ssl
+1. - Clone Laradock (git clone https://github.com/Laradock/laradock.git)
+2. - Enter the laradock folder and rename env-example to .env.
+ * 2a. Create laradock sibling folder named public ( you can later change the name by going to nginx/sites/default.conf)
+ * 2b. nginx/sites/default.conf also allows setting ssl
 
-cp env-example .env
 3 - Run your containers:
 
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
