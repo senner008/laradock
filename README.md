@@ -1,3 +1,50 @@
+### https://laradock.io introduction
+
+1 - Clone Laradock and 
+
+git clone https://github.com/Laradock/laradock.git
+2 - Enter the laradock folder and rename env-example to .env.
+2a. Create laradock sibling folder named public ( you can later change the name by going to nginx/sites/default.conf)
+2b. nginx/sites/default.conf also allows setting ssl
+
+cp env-example .env
+3 - Run your containers:
+
+docker-compose up -d nginx mysql phpmyadmin redis workspace 
+4 - Open your project’s .env file and set the following:
+
+DB_HOST=mysql
+REDIS_HOST=redis
+QUEUE_HOST=beanstalkd
+5 - Open your browser and visit localhost: http://localhost. or https:://localhost
+
+That's it! enjoy :)
+
+Supported Soft
+
+### Php mysql issue 
+ - https://stackoverflow.com/questions/52364415 php-with-mysql-8-0-error-the-server-requested-authentication-method-unknown-to
+
+check your **.env
+
+MYSQL_VERSION=latest
+then type this command
+
+$ docker-compose exec mysql bash (ensure you have latest version of docker-compose)
+$ mysql -u root -p 
+(login as root)
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+ALTER USER 'default'@'%' IDENTIFIED WITH mysql_native_password BY 'secret';
+then go to phpmyadmin and login as :
+
+host -> mysql
+user -> root
+password -> root
+hope it help
+
+
 <p align="center">
     <img src="/.github/home-page-images/laradock-logo.jpg?raw=true" alt="Laradock Logo"/>
 </p>
