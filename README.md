@@ -28,9 +28,8 @@ check your **.env
 MYSQL_VERSION=latest
 then type this command
 
-$ docker-compose exec mysql bash (ensure you have latest version of docker-compose)
-$ mysql -u root -p 
-(login as root)
+- $ docker-compose exec mysql bash (ensure you have latest version of docker-compose)
+- $ mysql -u root -p (login as root) / mysql -uroot -proot
 
 - ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 - ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
@@ -38,9 +37,10 @@ $ mysql -u root -p
 
 then go to phpmyadmin and login as :
 
-host -> mysql
-user -> root
-password -> root
+- host -> mysql
+- user -> root
+- password -> root
+
 hope it help
 
 
