@@ -5,15 +5,16 @@
  * 2a. Create laradock sibling folder named public ( you can later change the name by going to nginx/sites/default.conf)
  * 2b. nginx/sites/default.conf also allows setting ssl
 
-3 - Run your containers:
+3. - Run your containers:
 
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
-4 - Open your project’s .env file and set the following:
+4. - Open your project’s .env file and set the following:
 
 DB_HOST=mysql
 REDIS_HOST=redis
 QUEUE_HOST=beanstalkd
-5 - Open your browser and visit localhost: http://localhost. or https:://localhost
+
+5. - Open your browser and visit localhost: http://localhost. or https:://localhost
 
 That's it! enjoy :)
 
