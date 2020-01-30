@@ -1,8 +1,6 @@
-### https://laradock.io introduction
+### https://laradock.io Introduction
 
-1 - Clone Laradock and 
-
-git clone https://github.com/Laradock/laradock.git
+1 - Clone Laradock (git clone https://github.com/Laradock/laradock.git)
 2 - Enter the laradock folder and rename env-example to .env.
 2a. Create laradock sibling folder named public ( you can later change the name by going to nginx/sites/default.conf)
 2b. nginx/sites/default.conf also allows setting ssl
