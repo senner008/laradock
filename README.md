@@ -10,9 +10,9 @@
 
 4. - Open your project’s .env file and set the following:
 
-    DB_HOST=mysql
-    REDIS_HOST=redis
-    QUEUE_HOST=beanstalkd
+    - DB_HOST=mysql
+    - REDIS_HOST=redis
+    - QUEUE_HOST=beanstalkd
 
 5. - Open your browser and visit localhost: http://localhost. or https:://localhost
 
